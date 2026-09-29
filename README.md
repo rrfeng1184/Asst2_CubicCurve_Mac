@@ -10,9 +10,27 @@ This will create an asst2_CubicCurve_mac folder with all the source files.
 
 ## Build Instructions
 
-you can directly go to the build subdirectory and and run 
+To build your code for this assignment:
 ```
+$ cd asst2_cubic_curve && mkdir build && cd build
+$ cmake ..
 $ make
+```
+
+These steps (1) create an out-of-source build directory, (2) configure the project using CMake, and (3) compile the project. If all goes well, you should see an executable app in the build directory. As you work, simply typing make in the build directory will recompile the project. 
+
+If you run into multiple errors during the cmake/make: modify the minimum required cmake version in the corresponding cmake file that reports the error; if you see error related to NanoGui, go to NanoGui cmake file and remove "PREBUILD"; if you wee error related to glfw, go to glfw->src->cmakelist.txt and add the following:
+
+```
+if (APPLE)
+    set_source_files_properties(
+        nanogui/ext/glow/src/cocoa_init.m
+        nanogui/ext/glfw/src/cocoa_monitor.m
+        nanogui/ext/glfw/src/cocoa_window.m
+        nanogui/ext/glfw/src/nsgl_context.m
+        PROPERTIES COMPILE_FLAGS "-fno-objc-arc"
+    )
+endif()
 ```
 
 The configure the project using CMake is done already and thus you only need to run "make" to compile the project. If all goes well, you should see an executable app in the build directory. As you work, simply typing ```make``` in the build directory will recompile the project.
