@@ -12,7 +12,7 @@ This will create an asst2_CubicCurve_mac folder with all the source files.
 
 To build your code for this assignment:
 ```
-$ cd asst2_cubic_curve && mkdir build && cd build
+$ cd Asst2_CubicCurve_mac && mkdir build && cd build
 $ cmake ..
 $ make
 ```
