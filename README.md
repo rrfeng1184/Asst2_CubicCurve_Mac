@@ -1,31 +1,21 @@
-# UTD CS6323 Compute Animation and Gaming
+# Cubic Curve
 
 ## Getting started
-We will be distributing assignments with git. You can find the repository for this assignment at https://github.com/CS6323utd/asst2_cubic_curve. If you are unfamiliar with git, here is what you need to do to get the starter code:
+We will be distributing assignments with git. You can find the repository for this assignment at https://github.com/rrfeng1184/Asst2_CubicCurve_mac If you are unfamiliar with git, here is what you need to do to get the starter code:
 ```
 $ git clone https://github.com/CS6323utd/asst2_cubic_curve.git
 ```
-This will create an asst2_cubic_curve folder with all the source files.
+This will create an asst2_CubicCurve_mac folder with all the source files.
 
 
 ## Build Instructions
 
-In order to ease the process of running on different platforms, we will be using CMake for our assignments. You will need a CMake installation of version 3.5+ to build the code for this assignment. It should also be relatively easy to build the assignment and work locally on your OSX. Building on Linux is still working in process. Building on Windows is currently not supported, please refers to the old tuitorial.
-
-If you are working on OS X and do not have CMake installed, we recommend installing it through [**Homebrew**](https://brew.sh/):
+you can directly go to the build subdirectory and and run 
 ```
-brew install cmake
-```
-
-### Build
-
-To build your code for this assignment:
-```
-$ cd asst2_cubic_curve && mkdir build && cd build
-$ cmake ..
 $ make
 ```
-These steps (1) create an out-of-source build directory, (2) configure the project using CMake, and (3) compile the project. If all goes well, you should see an executable app in the build directory. As you work, simply typing ```make``` in the build directory will recompile the project.
+
+The configure the project using CMake is done already and thus you only need to run "make" to compile the project. If all goes well, you should see an executable app in the build directory. As you work, simply typing ```make``` in the build directory will recompile the project.
 
 ### Run
 
